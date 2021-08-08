@@ -3,10 +3,9 @@ import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss";
 import {
     featuredPortfolio,
+    desktopPortfolio,
+    pythonPortfolio,
     webPortfolio,
-    mobilePortfolio,
-    designPortfolio,
-    contentPortfolio,
 } from "../../data";
 
 export default function Portfolio() {
@@ -18,20 +17,16 @@ export default function Portfolio() {
             title: "Featured",
         },
         {
+            id: "desktop",
+            title: "Desktop App",
+        },
+        {
+            id: "python",
+            title: "Python Projects",
+        },
+        {
             id: "web",
-            title: "Web App",
-        },
-        {
-            id: "mobile",
-            title: "Mobile App",
-        },
-        {
-            id: "design",
-            title: "Design",
-        },
-        {
-            id: "content",
-            title: "Content",
+            title: "Web Dev",
         },
     ];
 
@@ -40,17 +35,14 @@ export default function Portfolio() {
             case "featured":
                 setData(featuredPortfolio);
                 break;
+            case "desktop":
+                setData(desktopPortfolio);
+                break;
+            case "python":
+                setData(pythonPortfolio);
+                break;
             case "web":
                 setData(webPortfolio);
-                break;
-            case "mobile":
-                setData(mobilePortfolio);
-                break;
-            case "design":
-                setData(designPortfolio);
-                break;
-            case "content":
-                setData(contentPortfolio);
                 break;
             default:
                 setData(featuredPortfolio);

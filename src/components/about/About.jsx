@@ -34,7 +34,7 @@ export default function About() {
             
             <div className='right'>
                 <div className='education'>
-                    <h1 className='edu-head'>My Education</h1>
+                    <h1 className='edu-head'>Education</h1>
                    <div className='total-edu'>
                        <div className='edu-div'>
                            <h2>B.Tech</h2>
@@ -57,7 +57,7 @@ export default function About() {
                    </div>
                 </div>
                 <div className='experience'>
-                    <h1 className='exp-head'>My Experience</h1>
+                    <h1 className='exp-head'>Experience</h1>
                     <div className='total-exp'>
                         <div className='exp-div'>
                             <h2>Placement Coordinator</h2>
