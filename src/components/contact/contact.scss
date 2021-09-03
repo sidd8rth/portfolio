@@ -1,3 +1,89 @@
-.contact{
-    background-color: lightyellow;
+@import "../../global.scss";
+
+.contact {
+    background-color: white;
+    display: flex;
+    overflow: hidden;
+
+    .left {
+        flex: 1;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+        }
+    }
+    .right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .contact-me{
+
+            .icon{
+                font-size: 40px;
+                padding: 10px;
+                color: #000;
+                text-align: center;
+            }
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        form {
+            width: 70%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            justify-content: space-around;
+
+            input {
+                margin: 10px;
+                width: 300px;
+                height: 30px;
+                font-size: 14px;
+                padding: 5px;
+
+            }
+
+            textarea {
+                margin: 10px;
+                width: 300px;
+                height: 200px;
+                font-size: 14px;
+                padding: 5px;
+
+            }
+
+            button {
+                width: 150px;
+                height: 30px;
+                color: white;
+                background-color: black;
+                border: none;
+                border-radius: 10px;
+                font-weight: 500;
+                cursor: pointer;
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+
+            span {
+                font-size: 15px;
+                margin-top: 20px;
+                color: green;
+                overflow: hidden;
+            }
+
+
+        }
+    }
 }

@@ -7,6 +7,7 @@ import {
     pythonPortfolio,
     webPortfolio,
 } from "../../data";
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 export default function Portfolio() {
     const [selected, setSelected] = useState("featured");
@@ -69,10 +70,17 @@ export default function Portfolio() {
                             src={d.img}
                             alt=""
                         />
+                        {/*<a href={d.link}></a>*/}
                         <h3>{d.title}</h3>
                     </div>
                 ))}
             </div>
+            <div>
+                <a href='#contact'>
+                    <KeyboardArrowDownIcon className='arrow'/>
+                </a>
+            </div>
         </div>
+
     );
 }

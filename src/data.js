@@ -4,6 +4,7 @@ export const featuredPortfolio = [
         title: "Keep It App",
         img:
             "assets/keep-it.png",
+        link : "https://github.com/sidd8rth/keep-it-app"
     },
     {
         id: 2,

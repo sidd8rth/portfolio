@@ -1,11 +1,11 @@
 .aboutSection{
-    background-color:#fff;
+    background-color: #fff;
     display: flex;
     .left{
-        flex: 0.5;
+        flex: 0.6;
         overflow: hidden;
         .wrapper{
-            padding: 100px;
+            padding: 100px 70px 0 70px;
             .about{
                 h1{
                     font-size: 60px;
@@ -16,6 +16,7 @@
                     font-size: 20px;
                     color: #777777;
                     line-height: 1.5;
+                    padding-bottom: 100px;
                 }
             }
             .arrow-down{
@@ -28,7 +29,7 @@
                         font-size: 60px;
                         text-align: center;
                         left: 200px;
-                        top: 0;
+                        top: 50px;
                         animation:arrowBlink 2s infinite;
                         -webkit-animation:arrowBlink 2s infinite;
                     }
@@ -42,57 +43,46 @@
         }
     }
     .right{
-        flex: 0.5;
+        flex: 0.4;
         overflow: hidden;
         align-items: center;
-        .education{
-            .edu-head{
-                text-align: center;
-                font-size: 60px;
-                padding:20px 0;
-            }
-            .total-edu{
-                display: flex;
-                .edu-div{
-                    color: #777777;
-                    line-height: 1.3;
-                    align-items: center;
-                    margin: 10px;
-                    padding: 20px 20px;
-                    border-radius: 5px;
-                    flex: 0.3;
-                    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
-                    .year{
-                        padding: 5px 0;
-                        font-size: 15px;
-                    }
-                }
-            }
+        padding-top: 20px;
+        margin-left: 100px;
+        margin-right: 100px;
+        ul {
+            text-align: center;
+            margin: 10px 0 20px 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
         }
-        .experience{
-            .exp-head{
-                text-align: center;
-                font-size: 60px;
-                padding:20px 0;
-            }
-            .total-exp {
-                display: flex;
-                text-align: center;
-                margin-left: auto;
-                .exp-div {
-                    color: #777777;
-                    line-height: 1.3;
-                    align-items: center;
-                    margin: 10px;
-                    padding: 20px 20px;
-                    border-radius: 5px;
-                    flex: 0.45;
-                    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        .container {
+            width: 70%;
+            align-items: center;
+            justify-content: center;
+            margin-left: 90px;
 
-                    .year {
-                        padding: 5px 0;
-                        font-size: 15px;
-                    }
+            .item {
+                padding: 1.2rem 2rem;
+                overflow: hidden;
+                display: inline-block;
+                border-left: 3px solid #333333;
+                border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+                letter-spacing: 0.3ch;
+                background: #ffffff;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    border-left: 2px solid #353535;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+                    border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
                 }
             }
         }

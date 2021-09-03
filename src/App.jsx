@@ -1,8 +1,6 @@
 import Topbar from './components/topbar/Topbar'
 import Intro from './components/intro/Intro'
 import Contact from './components/contact/Contact'
-import Testimonials from './components/testimonials/Testimonials'
-import Work from './components/work/Work'
 import Portfolio from './components/portfolio/Portfolio'
 import Menu from './components/menu/Menu'
 import About from './components/about/About'
@@ -21,8 +19,6 @@ function App() {
         <About/>
         <Skills />
         <Portfolio />
-        <Work />
-        <Testimonials/>
         <Contact />
       </div>
     </div>

@@ -1,17 +1,46 @@
 import './about.scss';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import { init } from 'ityped'
-import {useEffect, useRef} from 'react';
+import {useEffect,useState} from 'react';
+import AboutList from "../aboutList/AboutList";
+import {
+    educationAbout,
+    experienceAbout, responsibilityAbout
+} from "../../dataAbout";
 
 export default function About() {
-    const textRef = useRef();
-    useEffect(() =>{
-        init(textRef.current, {
-            showCursor: false,
-            typeSpeed:  50,
-            backDelay:  1500,
-            strings: ['10th : 90.',] })
-    },[]);
+    const [selected, setSelected] = useState("education");
+    const [data, setData] = useState([]);
+    const list = [
+        {
+            id: "education",
+            title: "Education",
+        },
+        {
+            id: "experience",
+            title: "Work Experience",
+        },
+        {
+            id: "responsibility",
+            title: "Position of Responsibility",
+        },
+    ];
+
+    useEffect(() => {
+        switch (selected) {
+            case "education":
+                setData(educationAbout);
+                break;
+            case "responsibility":
+                setData(responsibilityAbout);
+                break;
+            case "experience":
+                setData(experienceAbout);
+                break;
+            default:
+                setData(educationAbout);
+        }
+    }, [selected]);
+
     return (
         <div className='aboutSection' id='about'>
             <div className='left'>
@@ -33,43 +62,25 @@ export default function About() {
             </div>
             
             <div className='right'>
-                <div className='education'>
-                    <h1 className='edu-head'>Education</h1>
-                   <div className='total-edu'>
-                       <div className='edu-div'>
-                           <h2>B.Tech</h2>
-                           <h2>82.50 %</h2>
-                           <p className='year'>August 2019 - June 2023</p>
-                           <p>Shri G. S. Institute of Technology, Indore</p>
-                       </div>
-                       <div className='edu-div'>
-                           <h2>XII Standard</h2>
-                           <h2>90.80 %</h2>
-                           <p className='year'>March 2017 - March 2018 </p>
-                           <p>Shri Guru Tegh Bahadur Academy, Ratlam</p>
-                       </div>
-                       <div className='edu-div'>
-                           <h2>X Standard</h2>
-                           <h2>91.20 %</h2>
-                           <p className='year'>March 2015 - March 2016 </p>
-                           <p>Shri Guru Tegh Bahadur Academy, Ratlam</p>
-                       </div>
-                   </div>
-                </div>
-                <div className='experience'>
-                    <h1 className='exp-head'>Experience</h1>
-                    <div className='total-exp'>
-                        <div className='exp-div'>
-                            <h2>Placement Coordinator</h2>
-                            <p className='year'>May 2021 - Present </p>
-                            <p>Shri G. S. Institute of Technology, Indore</p>
+                <ul>
+                    {list.map((item) => (
+                        <AboutList
+                            title={item.title}
+                            active={selected === item.id}
+                            setSelected={setSelected}
+                            id={item.id}
+                        />
+                    ))}
+                </ul>
+                <div className="container">
+                    {data.map((d) => (
+                        <div className="item">
+                            <h1>{d.title}</h1>
+                            <h2>{d.score}</h2>
+                            <p>{d.year}</p>
+                            <p>{d.org}</p>
                         </div>
-                        <div className='exp-div'>
-                            <h2>House Captain</h2>
-                            <p className='year'>June 2016 - March 2018 </p>
-                            <p>Shri Guru Tegh Bahadur Academy, Ratlam</p>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>

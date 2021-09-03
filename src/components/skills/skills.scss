@@ -1,0 +1,61 @@
+@import "../../global.scss";
+
+.skills{
+  background-color: white;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+  h1{
+    font-size: 60px;
+    padding-bottom: 30px;
+  }
+  .skill-container {
+
+    justify-content: space-between;
+    list-style: none;
+    width: 80%;
+    margin: auto;
+    padding: 10px 0 10px 0;
+
+    .skill-item{
+      //border: 2px solid rgb(240, 239, 239);
+      align-items: center;
+      display: inline-block;
+      width: 30%;
+      margin-outside: 2px;
+      h3{
+        padding-top: 10px;
+        font-size: 1.4rem;
+      }
+      div{
+        .item-paragraph{
+          margin: auto;
+          padding: 20px 0;
+          width: 70%
+        }
+      }
+    }
+  }
+  div{
+    overflow: hidden;
+    a{
+      .arrow{
+        color: #000;
+        position: relative;
+        padding: 30px;
+        font-size: 60px;
+        text-align: center;
+        //left: 250px;
+        bottom: 20px;
+        animation:arrowBlink 2s infinite;
+        -webkit-animation:arrowBlink 2s infinite;
+      }
+      @keyframes arrowBlink{
+        100%{
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+}
