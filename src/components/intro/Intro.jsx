@@ -10,7 +10,8 @@ import {useEffect, useRef} from 'react';
 export default function Intro() {
     const textRef = useRef();
     useEffect(() =>{
-        init(textRef.current, { showCursor: false,typeSpeed:  50,backDelay:  1500, strings: ['Web', 'Python' ] })
+        init(textRef.current, { showCursor: false,typeSpeed:  50,backDelay:  1500, strings: ['Web Developer', 'Python Engineer',
+            'Software Engineer'] })
     },[]);
     return (
         <div className="intro" id="intro">
@@ -23,10 +24,9 @@ export default function Intro() {
                 <div className="wrapper">
                     <h2>Hi There, I'm</h2>
                     <h1>Siddharth Porwal</h1>
-                    <h3><span ref={textRef}></span> Developer</h3>
+                    <h3>&lt;<span ref={textRef}></span>&gt;</h3>
                     <div class='about'>
-                        <p>I am a tech enthusiast, currently working on web development.Seeking a career in
-                            Cyber Security and Ethical Hacking </p>
+                        <p>A tech-savvy mortal, currently working and learning to excel in Cyber Security and Data Science</p>
                     </div>
                     <div className='contact-me'>
                         <a href="https://github.com/sidd8rth" target="_blank" rel="noreferrer"><GitHubIcon className='icon'/></a>

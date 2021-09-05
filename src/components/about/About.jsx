@@ -48,9 +48,9 @@ export default function About() {
                     <div className='about'>
                         <h1>About Me</h1>
                         <p>I am a pre-final year Student pursuing Bachelor of Technology in Information Technology from
-                            'Shri G. S. Institute of Technology and Science, Indore'.I have keen interest in diplomacy and
-                            programming. As a technology enthusiast , i want to be to optimize, customize and tinker whatever
-                            I get just like an hacker. Want to build a good environment where cybersecurity threat is no longer present.
+                            'Shri G. S. Institute of Technology and Science, Indore'. My interests in engineering field resides in
+                            web design and development, machine learning, data science, artificial intelligence and
+                            cyber security. Exploring and working on the latest technologies excites me.
                         </p>
                     </div>
                     <div className='arrow-down'>
@@ -77,8 +77,8 @@ export default function About() {
                         <div className="item">
                             <h1>{d.title}</h1>
                             <h2>{d.score}</h2>
-                            <p>{d.year}</p>
-                            <p>{d.org}</p>
+                            <p style={{color: "#777777"}}>{d.year}</p>
+                            <p style={{color: "#777777"}}>{d.org}</p>
                         </div>
                     ))}
                 </div>
