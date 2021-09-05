@@ -33,10 +33,10 @@ export default function Contact() {
             <div className="right">
                 <h2>Contact.</h2>
                 <form onSubmit={sendEmail}>
-                    <input type="text" name='fullName' placeholder="Full Name"/>
-                    <input type="text" name='email'  placeholder="Email" />
+                    <input type="text" name='fullName' placeholder="Full Name" required/>
+                    <input type="text" name='email'  placeholder="Email" required/>
                     <input type="text" name='phone' placeholder="Mobile Number" />
-                    <textarea name='message' placeholder="Message"></textarea>
+                    <textarea name='message' placeholder="Message"required></textarea>
                     <button type="submit">Send</button>
                     <span>{message ? <Result/> : null}</span>
                 </form>
