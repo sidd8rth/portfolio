@@ -8,6 +8,9 @@
   h1{
     font-size: 60px;
     padding-bottom: 30px;
+    @include mobile{
+      font-size: 40px;
+    }
   }
   .skill-container {
 
@@ -16,9 +19,11 @@
     width: 80%;
     margin: auto;
     padding: 10px 0 10px 0;
-
+    @include mobile{
+      width: 100%;
+      align-items: center;
+    }
     .skill-item{
-      //border: 2px solid rgb(240, 239, 239);
       align-items: center;
       display: inline-block;
       width: 30%;
@@ -26,12 +31,18 @@
       h3{
         padding-top: 10px;
         font-size: 1.4rem;
+        @include mobile{
+          font-size: 1rem;
+        }
       }
       div{
         .item-paragraph{
           margin: auto;
           padding: 20px 0;
-          width: 70%
+          width: 70%;
+          @include mobile{
+
+          }
         }
       }
     }
@@ -45,10 +56,12 @@
         padding: 30px;
         font-size: 60px;
         text-align: center;
-        //left: 250px;
         bottom: 20px;
         animation:arrowBlink 2s infinite;
         -webkit-animation:arrowBlink 2s infinite;
+        @include mobile{
+          display: none;
+        }
       }
       @keyframes arrowBlink{
         100%{

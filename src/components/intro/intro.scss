@@ -3,12 +3,16 @@
 .intro{
     background-color:#fff;
     display: flex;
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
     .left{
         flex: 0.5;
         overflow: hidden;
         .imageContainer{
-            height: 800px;
-            width: 800px;
+            height: auto;
+            width: 50vw;
             border-radius: 50%;
             -webkit-border-radius: 50%;
             -moz-border-radius: 50%;
@@ -18,6 +22,10 @@
             align-items: flex-end;
             justify-content: center;
             float:right;
+            @include mobile{
+                align-items: flex-start;
+                width: 80vw;
+            }
             img{
                 width: 100%;
             }
@@ -32,16 +40,30 @@
             display: flex;
             flex-direction:column;
             justify-content:center;
-
+            @include mobile{
+                padding: 0;
+                align-items: center;
+            }
             h1{
                 font-size:60px;
-                margin: 10px 0
+                margin: 10px 0;
+                @include mobile{
+                    font-size: 40px;
+                    padding-bottom:  10px;
+                }
             }
             h2{
                 font-size:35px;
+                @include mobile{
+                    font-size: 30px
+                }
             }
             h3{
                 font-size:30px;
+                @include mobile{
+                    padding-top: 10px;
+                    font-size: 20px;
+                }
                 span{
                     font-size:inherit;
                     color: red;
@@ -53,6 +75,10 @@
                 font-size:20px;
                 line-height:1.5em;
                 color: #777777;
+                @include mobile{
+                    width: 80%;
+                    text-align: center;
+                }
             }
             .contact-me{
                 position: relative;
@@ -62,6 +88,9 @@
                     padding: 10px;
                     color: #000;
                     text-align: center;
+                    @include mobile{
+                        margin-top: 0;
+                    }
                 }
             }
             div{
@@ -77,6 +106,10 @@
                         top: 50px;
                         animation:arrowBlink 2s infinite;
                         -webkit-animation:arrowBlink 2s infinite;
+
+                    }
+                    @include mobile{
+                        display: none;
                     }
                     @keyframes arrowBlink{
                         100%{

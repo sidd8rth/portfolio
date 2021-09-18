@@ -1,5 +1,6 @@
 import './topbar.scss'
 import {Person,Mail} from '@material-ui/icons/';
+import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
 
 export default function Topbar({menuOpen,setMenuOpen}) {
     return (
@@ -14,6 +15,10 @@ export default function Topbar({menuOpen,setMenuOpen}) {
                     <div className='itemContainer'>
                         <Mail className='icon'/>
                         <span>sidd8rthp0rwal@gmail.com</span>
+                    </div>
+                    <div className='itemContainer'>
+                        <InsertDriveFileIcon className='icon'/>
+                        <span><a href="">Resume</a></span>
                     </div>
                 </div>
                 <div className='right'>
